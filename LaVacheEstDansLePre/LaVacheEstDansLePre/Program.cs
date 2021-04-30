@@ -17,6 +17,8 @@ namespace LaVacheEstDansLePre
             double ordonne;
             double aire;
 
+            string centreGraviteGxGy;
+
             Console.Out.WriteLine("Saisir le nombre de piquets");
             nombrePiquet = int.Parse(Console.In.ReadLine());
 
@@ -36,6 +38,11 @@ namespace LaVacheEstDansLePre
             //Renvoie l'aire du polygone
             aire = Math.Abs(calculPre.CalculAire());
             Console.Out.WriteLine("Aire = {0}", aire);
+
+            //Renvoie le centre de gravité
+            centreGraviteGxGy = calculPre.CalculCentreGravite();
+            Console.Out.WriteLine("Centre de gravité : {0}", centreGraviteGxGy);
+            Console.ReadKey();
 
         }
     }

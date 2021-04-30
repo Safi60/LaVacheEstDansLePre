@@ -47,6 +47,47 @@ namespace LaVacheEstDansLePre
             return m_aire / 2;
         }
 
+        public string CalculCentreGravite()
+        {
+            double abscisseGx = 0;
+            double ordonneGy = 0;
 
+            double abscisse1;
+            double ordonne1;
+            double abscisse2;
+            double ordonne2;
+
+            double liaisonX;
+            double liaisonY;
+
+            string centreGravite;
+
+            double m_aire = CalculAire();
+
+            for (int segment = 0; segment < ListePiquet.Count - 1; segment++)
+            {
+                abscisse1 = ListePiquet.ElementAt(segment).Abscisse;
+                ordonne1 = ListePiquet.ElementAt(segment).Ordonnee;
+                abscisse2 = ListePiquet.ElementAt(segment + 1).Abscisse;
+                ordonne2 = ListePiquet.ElementAt(segment + 1).Ordonnee;
+                abscisseGx += (abscisse1 + abscisse2) * (abscisse1 * ordonne2 - abscisse2 * ordonne1);
+                ordonneGy += (ordonne1 + ordonne2) * (abscisse1 * ordonne2 - abscisse2 * ordonne1);
+            }
+
+            liaisonX = (ListePiquet.ElementAt(ListePiquet.Count - 1).Abscisse + ListePiquet.ElementAt(0).Abscisse)
+                        * ((ListePiquet.ElementAt(ListePiquet.Count - 1).Abscisse * ListePiquet.ElementAt(0).Ordonnee)
+                        - ListePiquet.ElementAt(0).Abscisse * ListePiquet.ElementAt(ListePiquet.Count - 1).Ordonnee);
+
+            liaisonY = (ListePiquet.ElementAt(ListePiquet.Count - 1).Ordonnee + ListePiquet.ElementAt(0).Ordonnee)
+                        * ((ListePiquet.ElementAt(ListePiquet.Count - 1).Abscisse * ListePiquet.ElementAt(0).Ordonnee)
+                        - ListePiquet.ElementAt(0).Abscisse * ListePiquet.ElementAt(ListePiquet.Count - 1).Ordonnee);
+
+            abscisseGx = Math.Round((1 / (6 * m_aire)) * (abscisseGx + liaisonX), 6);
+            ordonneGy = Math.Round((1 / (6 * m_aire)) * (ordonneGy + liaisonY), 6);
+
+            centreGravite = abscisseGx + ", " + ordonneGy;
+
+            return centreGravite;
+        }
     }
 }

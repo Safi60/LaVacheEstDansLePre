@@ -1,0 +1,7 @@
+C:\Users\UPJV\Desktop\ProjetTutoré\LaVacheEstDansLePre\LaVacheEstDansLePre\bin\Debug\LaVacheEstDansLePre.exe.config
+C:\Users\UPJV\Desktop\ProjetTutoré\LaVacheEstDansLePre\LaVacheEstDansLePre\bin\Debug\LaVacheEstDansLePre.exe
+C:\Users\UPJV\Desktop\ProjetTutoré\LaVacheEstDansLePre\LaVacheEstDansLePre\bin\Debug\LaVacheEstDansLePre.pdb
+C:\Users\UPJV\Desktop\ProjetTutoré\LaVacheEstDansLePre\LaVacheEstDansLePre\obj\Debug\LaVacheEstDansLePre.csprojAssemblyReference.cache
+C:\Users\UPJV\Desktop\ProjetTutoré\LaVacheEstDansLePre\LaVacheEstDansLePre\obj\Debug\LaVacheEstDansLePre.csproj.CoreCompileInputs.cache
+C:\Users\UPJV\Desktop\ProjetTutoré\LaVacheEstDansLePre\LaVacheEstDansLePre\obj\Debug\LaVacheEstDansLePre.exe
+C:\Users\UPJV\Desktop\ProjetTutoré\LaVacheEstDansLePre\LaVacheEstDansLePre\obj\Debug\LaVacheEstDansLePre.pdb
