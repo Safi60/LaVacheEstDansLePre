@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LaVacheEstDansLePre
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -19,6 +19,8 @@ namespace LaVacheEstDansLePre
 
             string centreGraviteGxGy;
 
+            string appartenance;
+
             Console.Out.WriteLine("Saisir le nombre de piquets");
             nombrePiquet = int.Parse(Console.In.ReadLine());
 
@@ -28,7 +30,6 @@ namespace LaVacheEstDansLePre
                 Console.Out.WriteLine("Saisir le piquet {0}", compteurPiquet);
                 abscisse = double.Parse(Console.In.ReadLine());
                 ordonne = double.Parse(Console.In.ReadLine());
-
                 Piquet newPiquet = new Piquet(abscisse, ordonne);
                 newPiquet.Abscisse = abscisse;
                 newPiquet.Ordonnee = ordonne;
@@ -42,6 +43,11 @@ namespace LaVacheEstDansLePre
             //Renvoie le centre de gravité
             centreGraviteGxGy = calculPre.CalculCentreGravite();
             Console.Out.WriteLine("Centre de gravité : {0}", centreGraviteGxGy);
+
+            //Renvoie l'appartenance
+            appartenance = calculPre.CalculAppartenance();
+            Console.Out.WriteLine(appartenance);
+
             Console.ReadKey();
 
         }
